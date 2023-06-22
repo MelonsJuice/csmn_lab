@@ -1,0 +1,807 @@
+A = [1,2,3;4 5 6;7 8 9]
+
+A =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+A = [1,2,3;4 5;7 8 9]
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of arrays being concatenated are not consistent.
+} 
+x = [1;4;6;23;98]
+
+x =
+
+     1
+     4
+     6
+    23
+    98
+
+y = [21 34 2 1 -9]'
+
+y =
+
+    21
+    34
+     2
+     1
+    -9
+
+I = eye(7)
+
+I =
+
+     1     0     0     0     0     0     0
+     0     1     0     0     0     0     0
+     0     0     1     0     0     0     0
+     0     0     0     1     0     0     0
+     0     0     0     0     1     0     0
+     0     0     0     0     0     1     0
+     0     0     0     0     0     0     1
+
+B = zeros(5,4)
+
+B =
+
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+
+B = zeros(5,5)
+
+B =
+
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+
+B = zeros(5)
+
+B =
+
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+
+C = ones(3,4)
+
+C =
+
+     1     1     1     1
+     1     1     1     1
+     1     1     1     1
+
+C = ones(3)
+
+C =
+
+     1     1     1
+     1     1     1
+     1     1     1
+
+D = 23*ones(6)
+
+D =
+
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+
+R = rand(5,6)
+
+R =
+
+    0.8147    0.0975    0.1576    0.1419    0.6557    0.7577
+    0.9058    0.2785    0.9706    0.4218    0.0357    0.7431
+    0.1270    0.5469    0.9572    0.9157    0.8491    0.3922
+    0.9134    0.9575    0.4854    0.7922    0.9340    0.6555
+    0.6324    0.9649    0.8003    0.9595    0.6787    0.1712
+
+S = randi([2,100],6,8)
+
+S =
+
+    71    70    77    72    13    76    56    82
+     5    33    80    76    51    27    15    26
+    29    96    20    29    97    52    16    93
+     6     5    50    69    35    71    27    36
+    11    45    46    66    59    90    85    21
+    83    39    65    18    24    96    27    26
+
+S = randi(100,6,8)
+
+S =
+
+    62    92     8    57    32    69    16    11
+    48    29     6    47    53    75    83    97
+    36    76    54     2    17    46    54     1
+    84    76    78    34    61     9   100    78
+    59    39    94    17    27    23     8    82
+    55    57    13    80    66    92    45    87
+
+T = randn(4,5)
+
+T =
+
+   -1.0582   -0.2779   -0.8236    0.0335   -0.2991
+   -0.4686    0.7015   -1.5771   -1.3337    0.0229
+   -0.2725   -2.0518    0.5080    1.1275   -0.2620
+    1.0984   -0.3538    0.2820    0.3502   -1.7502
+
+whos
+  Name      Size            Bytes  Class     Attributes
+
+  A         3x3                72  double              
+  B         5x5               200  double              
+  C         3x3                72  double              
+  D         6x6               288  double              
+  I         7x7               392  double              
+  R         5x6               240  double              
+  S         6x8               384  double              
+  T         4x5               160  double              
+  x         5x1                40  double              
+  y         5x1                40  double              
+
+E = A+C
+
+E =
+
+     2     3     4
+     5     6     7
+     8     9    10
+
+z = x+y
+
+z =
+
+    22
+    38
+     8
+    24
+    89
+
+w = [3 1 54 -2 1]
+
+w =
+
+     3     1    54    -2     1
+
+x+w
+
+ans =
+
+     4     2    55    -1     2
+     7     5    58     2     5
+     9     7    60     4     7
+    26    24    77    21    24
+   101    99   152    96    99
+
+whos
+  Name      Size            Bytes  Class     Attributes
+
+  A         3x3                72  double              
+  B         5x5               200  double              
+  C         3x3                72  double              
+  D         6x6               288  double              
+  E         3x3                72  double              
+  I         7x7               392  double              
+  R         5x6               240  double              
+  S         6x8               384  double              
+  T         4x5               160  double              
+  ans       5x5               200  double              
+  w         1x5                40  double              
+  x         5x1                40  double              
+  y         5x1                40  double              
+  z         5x1                40  double              
+
+U = T*B
+
+U =
+
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+
+B*T
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mtimes')" style="font-weight:bold"> * </a>
+Incorrect dimensions for matrix multiplication. Check that the number of
+columns in the first matrix matches the number of rows in the second matrix.
+To perform elementwise multiplication, use '.*'.
+
+<a href="matlab:helpview('matlab','error_innerdim')" style="font-weight:bold">Related documentation</a>
+} 
+C^2
+
+ans =
+
+     3     3     3
+     3     3     3
+     3     3     3
+
+C
+
+C =
+
+     1     1     1
+     1     1     1
+     1     1     1
+
+C.^2
+
+ans =
+
+     1     1     1
+     1     1     1
+     1     1     1
+
+x.^2
+
+ans =
+
+           1
+          16
+          36
+         529
+        9604
+
+x
+
+x =
+
+     1
+     4
+     6
+    23
+    98
+
+help /
+ /   Slash or right matrix divide.
+    A/B is the matrix division of B into A, which is roughly the
+    same as A*INV(B) , except it is computed in a different way.
+    More precisely, A/B = (B'\A')'. See MLDIVIDE for details.
+ 
+    C = <strong>mrdivide</strong>(A,B) is called for the syntax 'A / B' when A or B is an
+    object.
+ 
+    See also <a href="matlab:help mldivide">mldivide</a>, <a href="matlab:help rdivide">rdivide</a>, <a href="matlab:help ldivide">ldivide</a>.
+
+    <a href="matlab:doc mrdivide">Documentation for mrdivide</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('mrdivide')">Other functions named mrdivide</a>
+
+help \
+ \   Backslash or left matrix divide.
+    A\B is the matrix division of A into B, which is roughly the
+    same as INV(A)*B , except it is computed in a different way.
+    If A is an N-by-N matrix and B is a column vector with N
+    components, or a matrix with several such columns, then
+    X = A\B is the solution to the equation A*X = B. A warning 
+    message is printed if A is badly scaled or nearly singular.
+    A\EYE(SIZE(A)) produces the inverse of A.
+ 
+    If A is an M-by-N matrix with M < or > N and B is a column
+    vector with M components, or a matrix with several such columns,
+    then X = A\B is the solution in the least squares sense to the
+    under- or overdetermined system of equations A*X = B. The
+    effective rank, K, of A is determined from the QR decomposition
+    with pivoting. A solution X is computed which has at most K
+    nonzero components per column. If K < N this will usually not
+    be the same solution as PINV(A)*B.  A\EYE(SIZE(A)) produces a
+    generalized inverse of A.
+ 
+    C = <strong>mldivide</strong>(A,B) is called for the syntax 'A \ B' when A or B is an
+    object.
+ 
+    See also <a href="matlab:help ldivide">ldivide</a>, <a href="matlab:help rdivide">rdivide</a>, <a href="matlab:help mrdivide">mrdivide</a>.
+
+    <a href="matlab:doc mldivide">Documentation for mldivide</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('mldivide')">Other functions named mldivide</a>
+
+whos
+  Name      Size            Bytes  Class     Attributes
+
+  A         3x3                72  double              
+  B         5x5               200  double              
+  C         3x3                72  double              
+  D         6x6               288  double              
+  E         3x3                72  double              
+  I         7x7               392  double              
+  R         5x6               240  double              
+  S         6x8               384  double              
+  T         4x5               160  double              
+  U         4x5               160  double              
+  ans       5x1                40  double              
+  w         1x5                40  double              
+  x         5x1                40  double              
+  y         5x1                40  double              
+  z         5x1                40  double              
+
+C = rand(5)
+
+C =
+
+    0.2399    0.0497    0.3377    0.3897    0.9421
+    0.1233    0.9027    0.9001    0.2417    0.9561
+    0.1839    0.9448    0.3692    0.4039    0.5752
+    0.2400    0.4909    0.1112    0.0965    0.0598
+    0.4173    0.4893    0.7803    0.1320    0.2348
+
+B/C
+
+ans =
+
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+
+B*inv(C)
+
+ans =
+
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+
+B\C
+[Warning: Matrix is singular to working precision.] 
+[] 
+
+ans =
+
+   Inf   Inf   Inf   Inf   Inf
+   NaN   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN   NaN
+
+inv(B)*C
+[Warning: Matrix is singular to working precision.] 
+[] 
+
+ans =
+
+   Inf   Inf   Inf   Inf   Inf
+   Inf   Inf   Inf   Inf   Inf
+   Inf   Inf   Inf   Inf   Inf
+   Inf   Inf   Inf   Inf   Inf
+   Inf   Inf   Inf   Inf   Inf
+
+a = nan
+
+a =
+
+   NaN
+
+2*nan
+
+ans =
+
+   NaN
+
+D
+
+D =
+
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+    23    23    23    23    23    23
+
+C
+
+C =
+
+    0.2399    0.0497    0.3377    0.3897    0.9421
+    0.1233    0.9027    0.9001    0.2417    0.9561
+    0.1839    0.9448    0.3692    0.4039    0.5752
+    0.2400    0.4909    0.1112    0.0965    0.0598
+    0.4173    0.4893    0.7803    0.1320    0.2348
+
+whos C
+  Name      Size            Bytes  Class     Attributes
+
+  C         5x5               200  double              
+
+C(1,2)
+
+ans =
+
+    0.0497
+
+C(2,1:5)
+
+ans =
+
+    0.1233    0.9027    0.9001    0.2417    0.9561
+
+C(2,:)
+
+ans =
+
+    0.1233    0.9027    0.9001    0.2417    0.9561
+
+C(2,1:end)
+
+ans =
+
+    0.1233    0.9027    0.9001    0.2417    0.9561
+
+C(2,3:end)
+
+ans =
+
+    0.9001    0.2417    0.9561
+
+C(:,3)
+
+ans =
+
+    0.3377
+    0.9001
+    0.3692
+    0.1112
+    0.7803
+
+C(1:end,3)
+
+ans =
+
+    0.3377
+    0.9001
+    0.3692
+    0.1112
+    0.7803
+
+C(1:5,3)
+
+ans =
+
+    0.3377
+    0.9001
+    0.3692
+    0.1112
+    0.7803
+
+C
+
+C =
+
+    0.2399    0.0497    0.3377    0.3897    0.9421
+    0.1233    0.9027    0.9001    0.2417    0.9561
+    0.1839    0.9448    0.3692    0.4039    0.5752
+    0.2400    0.4909    0.1112    0.0965    0.0598
+    0.4173    0.4893    0.7803    0.1320    0.2348
+
+C(2:4,2:3)
+
+ans =
+
+    0.9027    0.9001
+    0.9448    0.3692
+    0.4909    0.1112
+
+C([2,4],2:3)
+
+ans =
+
+    0.9027    0.9001
+    0.4909    0.1112
+
+C([2,4],[1,3])
+
+ans =
+
+    0.1233    0.9001
+    0.2400    0.1112
+
+C([2,4,5],[1,3])
+
+ans =
+
+    0.1233    0.9001
+    0.2400    0.1112
+    0.4173    0.7803
+
+C
+
+C =
+
+    0.2399    0.0497    0.3377    0.3897    0.9421
+    0.1233    0.9027    0.9001    0.2417    0.9561
+    0.1839    0.9448    0.3692    0.4039    0.5752
+    0.2400    0.4909    0.1112    0.0965    0.0598
+    0.4173    0.4893    0.7803    0.1320    0.2348
+
+find(C>0.5)
+
+ans =
+
+     7
+     8
+    12
+    15
+    21
+    22
+    23
+
+[i,j] = find(C>0.5)
+
+i =
+
+     2
+     3
+     2
+     5
+     1
+     2
+     3
+
+
+j =
+
+     2
+     2
+     3
+     3
+     5
+     5
+     5
+
+[i,j]
+
+ans =
+
+     2     2
+     3     2
+     2     3
+     5     3
+     1     5
+     2     5
+     3     5
+
+[i;j]
+
+ans =
+
+     2
+     3
+     2
+     5
+     1
+     2
+     3
+     2
+     2
+     3
+     3
+     5
+     5
+     5
+
+whos C x
+  Name      Size            Bytes  Class     Attributes
+
+  C         5x5               200  double              
+  x         5x1                40  double              
+
+Q = [C,x]
+
+Q =
+
+    0.2399    0.0497    0.3377    0.3897    0.9421    1.0000
+    0.1233    0.9027    0.9001    0.2417    0.9561    4.0000
+    0.1839    0.9448    0.3692    0.4039    0.5752    6.0000
+    0.2400    0.4909    0.1112    0.0965    0.0598   23.0000
+    0.4173    0.4893    0.7803    0.1320    0.2348   98.0000
+
+Q = [C,w]
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('horzcat')" style="font-weight:bold">horzcat</a>
+Dimensions of arrays being concatenated are not consistent.
+} 
+Q = [C;w]
+
+Q =
+
+    0.2399    0.0497    0.3377    0.3897    0.9421
+    0.1233    0.9027    0.9001    0.2417    0.9561
+    0.1839    0.9448    0.3692    0.4039    0.5752
+    0.2400    0.4909    0.1112    0.0965    0.0598
+    0.4173    0.4893    0.7803    0.1320    0.2348
+    3.0000    1.0000   54.0000   -2.0000    1.0000
+
+R = rand(5) + i*rand(5)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mtimes')" style="font-weight:bold"> * </a>
+Incorrect dimensions for matrix multiplication. Check that the number of
+columns in the first matrix matches the number of rows in the second matrix.
+To perform elementwise multiplication, use '.*'.
+
+<a href="matlab:helpview('matlab','error_innerdim')" style="font-weight:bold">Related documentation</a>
+} 
+clear i
+R = rand(5) + i*rand(5)
+
+R =
+
+  Columns 1 through 4
+
+   0.9234 + 0.4886i   0.4389 + 0.5468i   0.2622 + 0.6791i   0.2967 + 0.8852i
+   0.4302 + 0.5785i   0.1111 + 0.5211i   0.6028 + 0.3955i   0.3188 + 0.9133i
+   0.1848 + 0.2373i   0.2581 + 0.2316i   0.7112 + 0.3674i   0.4242 + 0.7962i
+   0.9049 + 0.4588i   0.4087 + 0.4889i   0.2217 + 0.9880i   0.5079 + 0.0987i
+   0.9797 + 0.9631i   0.5949 + 0.6241i   0.1174 + 0.0377i   0.0855 + 0.2619i
+
+  Column 5
+
+   0.2625 + 0.3354i
+   0.8010 + 0.6797i
+   0.0292 + 0.1366i
+   0.9289 + 0.7212i
+   0.7303 + 0.1068i
+
+R'
+
+ans =
+
+  Columns 1 through 4
+
+   0.9234 - 0.4886i   0.4302 - 0.5785i   0.1848 - 0.2373i   0.9049 - 0.4588i
+   0.4389 - 0.5468i   0.1111 - 0.5211i   0.2581 - 0.2316i   0.4087 - 0.4889i
+   0.2622 - 0.6791i   0.6028 - 0.3955i   0.7112 - 0.3674i   0.2217 - 0.9880i
+   0.2967 - 0.8852i   0.3188 - 0.9133i   0.4242 - 0.7962i   0.5079 - 0.0987i
+   0.2625 - 0.3354i   0.8010 - 0.6797i   0.0292 - 0.1366i   0.9289 - 0.7212i
+
+  Column 5
+
+   0.9797 - 0.9631i
+   0.5949 - 0.6241i
+   0.1174 - 0.0377i
+   0.0855 - 0.2619i
+   0.7303 - 0.1068i
+
+R.'
+
+ans =
+
+  Columns 1 through 4
+
+   0.9234 + 0.4886i   0.4302 + 0.5785i   0.1848 + 0.2373i   0.9049 + 0.4588i
+   0.4389 + 0.5468i   0.1111 + 0.5211i   0.2581 + 0.2316i   0.4087 + 0.4889i
+   0.2622 + 0.6791i   0.6028 + 0.3955i   0.7112 + 0.3674i   0.2217 + 0.9880i
+   0.2967 + 0.8852i   0.3188 + 0.9133i   0.4242 + 0.7962i   0.5079 + 0.0987i
+   0.2625 + 0.3354i   0.8010 + 0.6797i   0.0292 + 0.1366i   0.9289 + 0.7212i
+
+  Column 5
+
+   0.9797 + 0.9631i
+   0.5949 + 0.6241i
+   0.1174 + 0.0377i
+   0.0855 + 0.2619i
+   0.7303 + 0.1068i
+
+v = C>0.5
+
+v =
+
+  5×5 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   0   0   0   0   1
+   0   1   1   0   1
+   0   1   0   0   1
+   0   0   0   0   0
+   0   0   1   0   0
+
+inv(C)
+
+ans =
+
+    1.2895   -0.2668   -2.1920    4.4231    0.1565
+   -0.6155    0.6288    0.1034    1.4573   -0.7156
+   -0.5991   -0.1297    0.7961   -2.9637    1.7362
+    0.0100   -3.2775    5.1683   -6.1163    2.2022
+    0.9762    1.4372   -1.8708    2.3896   -1.5357
+
+C^(-1)
+
+ans =
+
+    1.2895   -0.2668   -2.1920    4.4231    0.1565
+   -0.6155    0.6288    0.1034    1.4573   -0.7156
+   -0.5991   -0.1297    0.7961   -2.9637    1.7362
+    0.0100   -3.2775    5.1683   -6.1163    2.2022
+    0.9762    1.4372   -1.8708    2.3896   -1.5357
+
+C\eye(5)
+
+ans =
+
+    1.2895   -0.2668   -2.1920    4.4231    0.1565
+   -0.6155    0.6288    0.1034    1.4573   -0.7156
+   -0.5991   -0.1297    0.7961   -2.9637    1.7362
+    0.0100   -3.2775    5.1683   -6.1163    2.2022
+    0.9762    1.4372   -1.8708    2.3896   -1.5357
+
+det(C)
+
+ans =
+
+   -0.0326
+
+rank(A)
+
+ans =
+
+     2
+
+A
+
+A =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+det(A)
+
+ans =
+
+  -9.5162e-16
+
+x
+
+x =
+
+     1
+     4
+     6
+    23
+    98
+
+norm(x,1)
+
+ans =
+
+   132
+
+norm(x,inf)
+
+ans =
+
+    98
+
+norm(x,2)
+
+ans =
+
+  100.9257
+
+norm(x)
+
+ans =
+
+  100.9257
+
+norm(x,3/2)
+
+ans =
+
+  106.8282
+
+diary off

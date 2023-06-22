@@ -1,0 +1,470 @@
+A = rand(6)
+
+A =
+
+    0.8147    0.2785    0.9572    0.7922    0.6787    0.7060
+    0.9058    0.5469    0.4854    0.9595    0.7577    0.0318
+    0.1270    0.9575    0.8003    0.6557    0.7431    0.2769
+    0.9134    0.9649    0.1419    0.0357    0.3922    0.0462
+    0.6324    0.1576    0.4218    0.8491    0.6555    0.0971
+    0.0975    0.9706    0.9157    0.9340    0.1712    0.8235
+
+b = rand(6,1)
+
+b =
+
+    0.6948
+    0.3171
+    0.9502
+    0.0344
+    0.4387
+    0.3816
+
+x = A\b
+
+x =
+
+   -0.6617
+   -0.0122
+   -0.4586
+   -0.2055
+    1.7327
+    0.9390
+
+%x = inv(A)*b
+A*x
+
+ans =
+
+    0.6948
+    0.3171
+    0.9502
+    0.0344
+    0.4387
+    0.3816
+
+b
+
+b =
+
+    0.6948
+    0.3171
+    0.9502
+    0.0344
+    0.4387
+    0.3816
+
+norm(A*x - b,inf)
+
+ans =
+
+   1.1102e-16
+
+x = A\b
+
+x =
+
+   -0.6617
+   -0.0122
+   -0.4586
+   -0.2055
+    1.7327
+    0.9390
+
+x = ones(6,1)
+
+x =
+
+     1
+     1
+     1
+     1
+     1
+     1
+
+b = A*x
+
+b =
+
+    4.2274
+    3.6871
+    3.5606
+    2.4943
+    2.8135
+    3.9125
+
+x1 = A\b
+
+x1 =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+
+norm(x-x1,inf)
+
+ans =
+
+   8.4377e-15
+
+cond(A,2)
+
+ans =
+
+   91.4705
+
+A = rand(100);
+x = ones(100,1);
+b = A*x;
+x1 = A\b;
+norm(x-x1,inf)
+
+ans =
+
+   1.0658e-13
+
+cond(A,2)
+
+ans =
+
+   1.1478e+03
+
+norm(A*x1 - b,inf)
+
+ans =
+
+   4.2633e-14
+
+cond(A)
+
+ans =
+
+   1.1478e+03
+
+cond(A,1)
+
+ans =
+
+   3.3102e+03
+
+cond(A,inf)
+
+ans =
+
+   3.0865e+03
+
+clear,clc
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 8)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',8,0)">line 8</a>)
+Determinante nullo!
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 8)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',8,0)">line 8</a>)
+Determinante nullo!
+} 
+test_diag
+
+ans =
+
+     0
+
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+
+ans =
+
+     0
+
+test_diag
+
+ans =
+
+     0
+
+test_diag
+
+ans =
+
+     0
+
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+
+ans =
+
+     0
+
+test_diag
+
+ans =
+
+     0
+
+test_diag
+
+ans =
+
+     0
+
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+
+ans =
+
+     0
+
+test_diag
+
+ans =
+
+     0
+
+test_diag
+
+ans =
+
+     0
+
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+Determinante nullo!
+} 
+test_diag
+
+ans =
+
+     0
+
+edit backslash
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 12)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',12,0)">line 12</a>)
+Determinante nullo!
+} 
+test_diag
+
+ans =
+
+     0
+
+clear,clc
+test_diag
+
+ans =
+
+     0
+
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sist_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m', 6)" style="font-weight:bold">sist_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m',6,0)">line 6</a>)
+Determinante nullo!
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+x1 = sist_diag(D,b);
+} 
+test_diag
+
+ans =
+
+     0
+
+clear,clc
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sist_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m', 6)" style="font-weight:bold">sist_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m',6,0)">line 6</a>)
+Determinante nullo!
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+x1 = sist_diag(D,b);
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sist_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m', 6)" style="font-weight:bold">sist_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m',6,0)">line 6</a>)
+Determinante nullo!
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+x1 = sist_diag(D,b);
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sist_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m', 6)" style="font-weight:bold">sist_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m',6,0)">line 6</a>)
+Determinante nullo!
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+x1 = sist_diag(D,b);
+} 
+test_diag
+
+ans =
+
+     0
+
+d
+{Unrecognized function or variable 'd'.
+} 
+clear,clc
+test_diag
+
+ans =
+
+     0
+
+d
+{Unrecognized function or variable 'd'.
+} 
+test_diag
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sist_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m', 6)" style="font-weight:bold">sist_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\sist_diag.m',6,0)">line 6</a>)
+Determinante nullo!
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('test_diag', 'C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m', 11)" style="font-weight:bold">test_diag</a> (<a href="matlab: opentoline('C:\Users\LabT_Pal_Sc\Desktop\CSMN_2223\Lezione5\test_diag.m',11,0)">line 11</a>)
+x1 = sist_diag(D,b);
+} 
+test_diag
+
+ans =
+
+     0
+
+d
+{Unrecognized function or variable 'd'.
+} 
+clear,clc
+test_diag
+
+ans =
+
+     0
+
+d
+
+d =
+
+    8.5463
+    7.3709
+    9.7228
+    7.0662
+   11.6544
+   11.6450
+    8.1889
+   13.7600
+    9.7736
+   15.0636
+   11.6379
+   12.7635
+    9.4525
+   12.0744
+   10.2121
+    9.4357
+    7.5806
+    6.9343
+   10.2905
+    9.7262
+    9.6124
+   10.0991
+    9.7812
+    9.5227
+   11.3031
+    9.9001
+    9.7403
+    9.2754
+    7.3775
+    9.2667
+    9.3320
+   14.1790
+   14.1423
+    9.4616
+   14.1380
+    8.5556
+    8.9997
+   12.2414
+    8.9367
+   11.3092
+    9.8393
+    9.5546
+   10.6565
+    9.6193
+   11.1907
+    8.2178
+    7.8146
+    7.5563
+   12.1959
+    9.0073
+   10.5213
+   12.5124
+    7.9966
+    9.1458
+    7.0207
+    7.1231
+   10.8252
+    9.1283
+   10.5555
+    8.1121
+   13.2174
+    9.1379
+    9.1390
+   12.9553
+   10.8880
+    7.1416
+    6.1033
+    9.5050
+    6.5457
+   15.5358
+   14.5926
+    7.8836
+   10.5750
+   10.4301
+   12.3530
+   11.4202
+   10.8235
+   13.9931
+   15.0091
+   11.0820
+    7.9854
+    8.2867
+    7.6607
+    8.1460
+   12.4956
+    9.7792
+   10.4165
+   12.3074
+    7.7038
+   10.1831
+   12.6204
+   12.3702
+    9.9369
+   12.4091
+    6.1404
+   11.0821
+    8.1677
+   10.5904
+   12.2154
+    8.5215
+
+diary off
